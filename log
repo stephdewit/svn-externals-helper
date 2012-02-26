@@ -1,0 +1,6 @@
+#!/bin/sh
+
+svn propget -R svn:externals | \
+	grep -v "^$" | \
+	sed -E 's/.+ - (.+) .+/\1/' | \
+	xargs -n 1 svn log --incremental
