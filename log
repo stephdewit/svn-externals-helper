@@ -3,4 +3,9 @@
 svn propget -R svn:externals | \
 	grep -v "^$" | \
 	sed -E 's/.+ - (.+) .+/\1/' | \
-	xargs -n 1 svn log --incremental
+	xargs -n 1 svn log --stop-on-copy | \
+	grep -E "^r[0-9]+( \| .+){3}" | \
+	sed -E "s/^r([0-9]+).+$/\1/" | \
+	sort -n | uniq | \
+	sed -E "s/(.*)/-r \1/" | \
+	xargs svn log --incremental ^/
