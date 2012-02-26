@@ -1,0 +1,85 @@
+id: 2-4.0.r4/0
+type: file
+count: 0
+text: 3 0 4 0 d41d8cd98f00b204e9800998ecf8427e da39a3ee5e6b4b0d3255bfef95601890afd80709 3-3/_5
+cpath: /subproj2/trunk/file3
+copyroot: 0 /
+
+id: 4-4.0.r4/174
+type: file
+count: 0
+text: 3 0 4 0 d41d8cd98f00b204e9800998ecf8427e da39a3ee5e6b4b0d3255bfef95601890afd80709 3-3/_6
+cpath: /subproj2/trunk/file4
+copyroot: 0 /
+
+PLAIN
+K 5
+file3
+V 15
+file 2-4.0.r4/0
+K 5
+file4
+V 17
+file 4-4.0.r4/174
+END
+ENDREP
+id: f-1.0.r4/431
+type: dir
+pred: f-1.0.r1/452
+count: 1
+text: 4 350 68 68 5b5a59c82c3c17862ed1b0e61f8346bd
+cpath: /subproj2/trunk
+copyroot: 0 /
+
+PLAIN
+K 8
+branches
+V 16
+dir c-1.0.r1/526
+K 4
+tags
+V 16
+dir e-1.0.r1/603
+K 5
+trunk
+V 16
+dir f-1.0.r4/431
+END
+ENDREP
+id: b-1.0.r4/690
+type: dir
+pred: b-1.0.r1/791
+count: 1
+text: 4 575 102 102 694d487e38c1ce6cac08cc78408dca72
+cpath: /subproj2
+copyroot: 0 /
+
+PLAIN
+K 5
+proj1
+V 16
+dir 0-1.0.r2/619
+K 8
+subproj1
+V 16
+dir 6-1.0.r3/724
+K 8
+subproj2
+V 16
+dir b-1.0.r4/690
+END
+ENDREP
+id: 0.0.r4/949
+type: dir
+pred: 0.0.r3/983
+count: 4
+text: 4 830 106 106 e5b65be882dce825bfb33b78fe29a5ab
+cpath: /
+copyroot: 0 /
+
+_2.0.t3-3 add-file true false /subproj2/trunk/file3
+
+_4.0.t3-3 add-file true false /subproj2/trunk/file4
+
+
+949 1077
