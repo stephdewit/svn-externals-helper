@@ -1,0 +1,91 @@
+PLAIN
+K 13
+svn:externals
+V 26
+^/subproj2/trunk subproj2
+
+END
+ENDREP
+id: 2-2.0.r2/68
+type: dir
+count: 0
+props: 2 0 55 0 5dc5539b6756fa9b906750ddc4a03d62
+cpath: /proj1/trunk/subdir
+copyroot: 0 /
+
+PLAIN
+K 6
+subdir
+V 15
+dir 2-2.0.r2/68
+END
+ENDREP
+PLAIN
+K 13
+svn:externals
+V 26
+^/subproj1/trunk subproj1
+
+END
+ENDREP
+id: 5-1.0.r2/311
+type: dir
+pred: 5-1.0.r1/912
+count: 1
+text: 2 194 36 36 962f65dfcd63fd0bc06f9741c6e686b1
+props: 2 243 55 0 c6cbaeec3b104ba3f4314b5709f883be
+cpath: /proj1/trunk
+copyroot: 0 /
+
+PLAIN
+K 8
+branches
+V 16
+dir 2-1.0.r1/983
+K 4
+tags
+V 17
+dir 4-1.0.r1/1057
+K 5
+trunk
+V 16
+dir 5-1.0.r2/311
+END
+ENDREP
+id: 0-1.0.r2/619
+type: dir
+pred: 0-1.0.r1/1244
+count: 1
+text: 2 503 103 103 cda3901fdc3b6f6bcb89a655e8dbc331
+cpath: /proj1
+copyroot: 0 /
+
+PLAIN
+K 5
+proj1
+V 16
+dir 0-1.0.r2/619
+K 8
+subproj1
+V 16
+dir 6-1.0.r1/333
+K 8
+subproj2
+V 16
+dir b-1.0.r1/791
+END
+ENDREP
+id: 0.0.r2/876
+type: dir
+pred: 0.0.r1/1484
+count: 2
+text: 2 757 106 106 afbea9dc7f70e8c5dda0f773f460a393
+cpath: /
+copyroot: 0 /
+
+_2.0.t1-1 add-dir false true /proj1/trunk/subdir
+
+5-1.0.t1-1 modify-dir false true /proj1/trunk
+
+
+876 1005
