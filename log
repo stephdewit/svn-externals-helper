@@ -1,11 +1,9 @@
 #!/bin/sh
 
 svn propget -R svn:externals | \
-	grep -v "^$" | \
-	sed -E 's/.+ - (.+) .+/\1/' | \
+	sed -En 's/.+ - (.+) .+/\1/p' | \
 	xargs -n 1 svn log --stop-on-copy | \
-	grep -E "^r[0-9]+( \| .+){3}" | \
-	sed -E "s/^r([0-9]+).+$/\1/" | \
+	sed -En "s/^r([0-9]+)( \| .+){3}$/\1/p" | \
 	sort -n | uniq | \
 	sed -E "s/(.*)/-r \1/" | \
 	xargs svn log --incremental ^/
