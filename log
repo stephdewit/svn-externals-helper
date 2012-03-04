@@ -2,7 +2,7 @@
 
 svn propget -R svn:externals | \
 	sed -En 's/.+ - (.+) .+/\1/p' | \
-	echo ".\n$(cat)" | \
+	echo -e ".\n$(cat)" | \
 	xargs -n 1 svn log --stop-on-copy | \
 	sed -En 's/^r([0-9]+)( \| .+){3}$/\1/p' | \
 	sort -n | uniq | \
