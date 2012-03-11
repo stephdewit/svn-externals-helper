@@ -4,5 +4,5 @@ from=$1
 shift
 
 svn propget -R svn:externals | \
-	sed -En "s,^(.+) - (.+)/(trunk|((branches|tags)/.+)) (.+)$,\2/$from \1/\4,p" | \
+	sed -En "s,^(.+) - (.+)/(trunk|((branches|tags)/.+)) (.+)$,\2/$from \1/\6,p" | \
 	xargs -n 2 svn merge $*
