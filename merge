@@ -3,6 +3,11 @@
 source=$1
 shift
 
+if [ "$source" == '' ]; then
+	echo "Usage: $(basename $0) source [merge_parameters]"
+	exit 1
+fi
+
 svn propget -R svn:externals | \
 	sed -En "s,^(.+) - (.+)/(trunk|((branches|tags)/.+)) (.+)$,\2/$source \1/\6,p" | \
 	xargs -n 2 svn merge $*
