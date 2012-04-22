@@ -10,4 +10,4 @@ fi
 
 svn propget -R svn:externals | \
 	sed -En "s,^(.+) - (.+)/(trunk|((branches|tags)/.+)) (.+)$,\2/$source \1/\6,p" | \
-	xargs -n 2 svn merge $*
+	xargs -n 2 svn merge "$@"
