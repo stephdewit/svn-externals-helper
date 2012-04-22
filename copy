@@ -1,0 +1,13 @@
+#!/bin/sh
+
+dest=$1
+shift
+
+if [ "$dest" == '' ]; then
+	echo "Usage: $(basename $0) destination [copy_parameters]"
+	exit 1
+fi
+
+svn propget -R svn:externals | \
+	sed -En "s,^(.+) - (.+)/(trunk|((branches|tags)/.+)) (.+)$,\2/\3 \2/$dest,p" | \
+	xargs -n 2 svn copy "$@"
