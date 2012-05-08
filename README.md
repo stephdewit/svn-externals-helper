@@ -16,7 +16,7 @@ When you execute a `copy` operation the externals definitions aren't updated acc
 
 # Disclaimer
 
-If you need these scripts, **you're in serious troubles**. You should urgently rethink the way your repository is organized.
+If you need these scripts, **you're in serious troubles**. You should urgently rethink the way your code is organized.
 
 A more [modern SCM](http://git-scm.com) will also greatly improve the way you work.
 
